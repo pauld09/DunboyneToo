@@ -6,23 +6,26 @@ document.addEventListener('DOMContentLoaded', function() {
     //initDB()
     //updateDB()
     provider = new firebase.auth.GoogleAuthProvider();
+
+    firebase.auth().onAuthStateChanged(user => {
+      if(!user) {
+        window.location = 'login.html'; //If User is not logged in, redirect to login page
+      }
+      else {
+         loadMain()
+      }
+    });
   });
 
+function showBookingDoc() {
+   let bookingDocURL = "https://docs.google.com/document/d/1mp4raxnl3NcVV35BMiVpcGf11Y7paPES"
+   console.log("Showing bookings doc")
+}
 
-firebase.auth().onAuthStateChanged((user) => {
-   if (user) {
-     // User is signed in, see docs for a list of available properties
-     // https://firebase.google.com/docs/reference/js/firebase.User
-     var uid = user.uid;
-     // ...
-     // 👈 This is where you can also query the database as the user for the first time
-     console.log("Logged in user: " + user.displayName)
-   } else {
-     // User is signed out
-     // ...
-     console.log("State change - not user found")
-   }
- });
+function loadMain() {
+   console.log("Loading Main page")
+}
+
 
 function googleUser() {
    var user = null
@@ -34,16 +37,7 @@ function googleUser() {
    catch {
       console.log ("No one logged in")
    }
-   
-   
-   
-   if (user) {
-     // User is signed in, see docs for a list of available properties
-     // https://firebase.google.com/docs/reference/js/firebase.User
-     // ...
-   } else {
-     // No user is signed in.
-   }   
+
 }
 
 
