@@ -5,10 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     //initDefaultPage()
     //initDB()
     //updateDB()
-
     provider = new firebase.auth.GoogleAuthProvider();
-   console.log(provider)
-});
+  });
 
 
 firebase.auth().onAuthStateChanged((user) => {
@@ -18,7 +16,7 @@ firebase.auth().onAuthStateChanged((user) => {
      var uid = user.uid;
      // ...
      // 👈 This is where you can also query the database as the user for the first time
-     console.log(user.displayName)
+     console.log("Logged in user: " + user.displayName)
    } else {
      // User is signed out
      // ...
