@@ -29,7 +29,7 @@ html {
     bottom:0;
     right: 0;
     background-color: rgba(255,255,255,0.8);
-    margin: 20vh 5vw 0 5vw;
+    margin: 20vh 5vw 5vh 5vw;
     border-radius: 10px;
 }
 
@@ -38,25 +38,22 @@ html {
     text-align: center;
     background-color: rgb(240, 240, 240);
     font-size: 1rem;
-    width: 25vw;
-    height: 65vh;
+    width: 24vw;
+    height: 67vh;
     margin: 10px;
     padding: 2vw;
     border-radius: 10px;
 }
 
 #about {
-    top: 100px;
     left: 0;
 }
 
 #notices {
-    top: 100px;
-    left: 32vw;
+    left: 30vw;
 }
 
 #contacts {
-    top: 100px;
     right: 0;
 }
 
