@@ -28,22 +28,22 @@
         <script defer src="js/myscript.js"></script>
     </head>
     <body>
-        <div id="navbar"></div>
+        <div id="title">
+            Dunboyne Too
+        </div>
         <div id="main">
-            <div id="title">
-                Dunboyne Too
-            </div>
+
             <div id="about" class="content">
                 <p class="subtitle">Welcome to the Dunboyne Too homepage</p>
-                <p class="note">Use the members login below to see booking list and contact information, or view our Facebook page <a href="https://www.facebook.com/profile.php?id=100081041146433">here.</a></p>
+                <p class="note">Use the members login below ('Come Aboard') to see booking list and contact information, or view our Facebook page <a href="https://www.facebook.com/profile.php?id=100081041146433">here.</a></p>
                 <p>The Dunboyne Too is a 9 berth Haines 37 Cruiser based on the Shannon river. It is owned and operated 
                     as a Designated Activity Company (DAC) by the group of shareholders for their private use. </p>
                     <div id="login">
-                        <button onclick = "googleSignin()">Come Aboard</button>
-                        <button onclick = "googleSignout()">Disembark</button>
+                        <button class="authbtn" onclick = "googleSignin()">Come Aboard</button>
+                        <button class="authbtn" onclick = "googleSignout()">Disembark</button>
                     </div>
             </div>
-            <div id="notices" class="content"><p class="subtitle">Notice</p></div>
+            <div id="notices" class="content"><p class="subtitle">Notices</p><p class="note"><br>No active notices</p></div>
             <div id="contacts" class="content">C</div>
             <!-- Placeholder: set with "display: none" in CSS for now-->
 
